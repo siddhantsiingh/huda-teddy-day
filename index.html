@@ -3,72 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siddhant ❤️ Huda</title>
+<title>Happy Promise Day ❤️</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Segoe UI',sans-serif;overflow:hidden}
-
-/* slideshow */
-.bg{position:fixed;inset:0;background-size:cover;background-position:center;animation:slide 18s infinite}
-@keyframes slide{
-0%{background-image:url("huda1.jpg")}
-33%{background-image:url("huda2.jpg")}
-66%{background-image:url("huda3.jpg")}
-100%{background-image:url("huda1.jpg")}
+body{
+  margin:0;
+  font-family:system-ui, sans-serif;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
 }
 
-/* overlay */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45)}
-
-/* hearts */
-.heart{position:absolute;color:#ff6b81;font-size:18px;animation:float 8s linear infinite}
-@keyframes float{
-0%{transform:translateY(100vh);opacity:0}
-20%{opacity:1}
-100%{transform:translateY(-10vh);opacity:0}
-}
-
-/* card */
 .card{
-position:relative;z-index:2;max-width:380px;margin:auto;top:50%;
-transform:translateY(-50%);background:rgba(255,255,255,.92);
-padding:40px;border-radius:25px;text-align:center;
-box-shadow:0 10px 40px rgba(0,0,0,.3)
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  max-width:350px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 h1{color:#ff4d6d;margin-bottom:10px}
-p{color:#444}
+p{color:#555}
 
-button{
-margin-top:20px;padding:12px 26px;border:none;background:#ff4d6d;
-color:#fff;border-radius:25px;font-size:16px;cursor:pointer;transition:.3s
+.btn{
+  display:block;
+  margin-top:15px;
+  padding:12px;
+  border-radius:12px;
+  background:#ff4d6d;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
 }
-button:hover{transform:scale(1.05);background:#e63950}
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
-<div class="overlay"></div>
-
-<script>
-for(let i=0;i<25;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(5+Math.random()*5)+"s";
-document.body.appendChild(h);
-}
-</script>
-
 <div class="card">
-<h1>Happy Teddy Day Huda 🧸❤️</h1>
-<p>Every moment with you feels softer than a hug…  
-so I made this little world only for you.</p>
+  <h1>Happy Promise Day Huda ❤️</h1>
+  <p>
+    Today I don’t just say “I love you”…  
+    I make promises I’ll keep forever.
+  </p>
 
-<button onclick="location.href='love.html'">Open My Heart 💌</button>
+  <a class="btn" href="promises.html"><i class="ri-heart-3-fill"></i> My Promises</a>
+  <a class="btn" href="gallery.html"><i class="ri-image-2-fill"></i> Our Memories</a>
+  <a class="btn" href="quiz.html"><i class="ri-question-answer-fill"></i> Couple Quiz</a>
 </div>
 
 </body>
