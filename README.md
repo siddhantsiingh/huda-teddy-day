@@ -1,1 +1,0 @@
-# huda-teddy-day
