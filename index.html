@@ -3,82 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Huda ❤️</title>
+<title>Siddhant ❤️ Huda</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
-    background: url("huda.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
 }
 
-.overlay {
-    background: rgba(0,0,0,0.45);
-    position: absolute;
-    inset: 0;
+/* slideshow */
+.bg{
+  position:fixed;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  animation:slide 18s infinite;
 }
 
-.card {
-    position: relative;
-    background: rgba(255,255,255,0.92);
-    padding: 40px;
-    border-radius: 25px;
-    text-align: center;
-    max-width: 350px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+@keyframes slide{
+  0%{background-image:url("huda1.jpg")}
+  33%{background-image:url("huda2.jpg")}
+  66%{background-image:url("huda3.jpg")}
+  100%{background-image:url("huda1.jpg")}
 }
 
-h1 {
-    color: #ff4d6d;
-    margin-bottom: 10px;
+/* dark overlay */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
 }
 
-p {
-    color: #444;
+/* floating hearts */
+.heart{
+  position:absolute;
+  color:#ff6b81;
+  font-size:18px;
+  animation:float 8s linear infinite;
 }
 
-button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    border: none;
-    background: #ff4d6d;
-    color: white;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:0}
+  20%{opacity:1}
+  100%{transform:translateY(-10vh);opacity:0}
 }
 
-button:hover {
-    transform: scale(1.05);
-    background: #e63950;
+/* center card */
+.card{
+  position:relative;
+  z-index:2;
+  max-width:380px;
+  margin:auto;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(255,255,255,0.92);
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+  color:#ff4d6d;
+  margin-bottom:10px;
+}
+
+p{
+  color:#444;
+}
+
+button{
+  margin-top:20px;
+  padding:12px 26px;
+  border:none;
+  background:#ff4d6d;
+  color:#fff;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:#e63950;
 }
 </style>
 </head>
 
 <body>
 
+<div class="bg"></div>
 <div class="overlay"></div>
 
+<!-- floating hearts script -->
+<script>
+for(let i=0;i<25;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(h);
+}
+</script>
+
 <div class="card">
-    <h1>Happy Teddy Day Huda 🧸❤️</h1>
-    <p>
-        A small surprise made with lots of love…  
-        just for the most special girl in my life.
-    </p>
+  <h1>Happy Teddy Day Huda 🧸❤️</h1>
 
-    <button onclick="location.href='love.html'">
-        Open My Heart 💌
-    </button>
+  <p>
+    Every moment with you feels softer than a hug…  
+    so I made this little world only for you.
+  </p>
+
+  <button onclick="location.href='love.html'">
+    Open My Heart 💌
+  </button>
 </div>
-
-<audio autoplay loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
 
 </body>
 </html>
