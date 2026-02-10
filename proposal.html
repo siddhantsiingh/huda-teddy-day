@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever? 💍</title>
+
+<style>
+body{
+margin:0;font-family:'Segoe UI',sans-serif;
+background:#000;color:#fff;height:100vh;
+display:flex;justify-content:center;align-items:center;
+overflow:hidden;text-align:center
+}
+
+h1{font-size:28px;margin-bottom:20px}
+
+button{
+margin:10px;padding:12px 24px;border:none;border-radius:25px;
+font-size:16px;cursor:pointer
+}
+
+.yes{background:#ff4d6d;color:#fff}
+.no{background:#555;color:#fff;position:absolute}
+</style>
+</head>
+
+<body>
+
+<div>
+<h1>Huda… will you stay with me forever? 💍❤️</h1>
+<button class="yes" onclick="explode()">Yes 💖</button>
+<button class="no" onmouseover="moveNo()">No 🙈</button>
+</div>
+
+<script>
+function moveNo(){
+const b=document.querySelector(".no");
+b.style.top=Math.random()*80+"%";
+b.style.left=Math.random()*80+"%";
+}
+
+function explode(){
+for(let i=0;i<120;i++){
+let h=document.createElement("div");
+h.innerHTML="❤";
+h.style.position="absolute";
+h.style.left="50%";
+h.style.top="50%";
+h.style.fontSize="20px";
+h.style.color="#ff4d6d";
+h.style.transform=`translate(${(Math.random()-0.5)*600}px, ${(Math.random()-0.5)*600}px)`;
+h.style.transition="1s";
+document.body.appendChild(h);
+}
+document.querySelector("h1").innerHTML="Yayyy! 💖 I love you forever Huda 😭❤️";
+}
+</script>
+
+</body>
+</html>
